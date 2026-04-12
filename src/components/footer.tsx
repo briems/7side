@@ -1,11 +1,31 @@
+"use client";
+import React from "react";
+import { motion } from "framer-motion";
+
 export function Footer() {
   return (
-    <footer id="contact" className="border-t border-white/5 mt-24">
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-3 gap-12">
+    <footer id="contact" className="bg-black border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Big brand mark */}
+        <div className="py-24 flex items-center justify-center">
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+            className="text-[8rem] md:text-[14rem] font-bold tracking-tighter text-white/[0.03] select-none leading-none"
+          >
+            7SIDE
+          </motion.h2>
+        </div>
+
+        {/* Links */}
+        <div className="grid md:grid-cols-4 gap-12 py-16 border-t border-white/5">
           <div>
-            <h3 className="text-2xl font-bold tracking-tighter mb-4">7SIDE</h3>
-            <p className="text-zinc-500 text-sm leading-relaxed">
+            <h3 className="text-sm font-bold tracking-tighter text-white mb-6">
+              7SIDE
+            </h3>
+            <p className="text-xs text-neutral-600 leading-relaxed">
               Amsterdam-based streetwear
               <br />
               by Hayabusa
@@ -13,40 +33,64 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-zinc-400 mb-4">
-              Links
+            <h4 className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-6">
+              Shop
             </h4>
-            <div className="flex flex-col gap-2">
-              <a href="#collection" className="text-zinc-500 hover:text-white text-sm transition-colors">
+            <div className="flex flex-col gap-3">
+              <a href="#collection" className="text-xs text-neutral-600 hover:text-white transition-colors">
                 Collection
               </a>
-              <a href="#lookbook" className="text-zinc-500 hover:text-white text-sm transition-colors">
+              <a href="#lookbook" className="text-xs text-neutral-600 hover:text-white transition-colors">
                 Lookbook
               </a>
-              <a href="#about" className="text-zinc-500 hover:text-white text-sm transition-colors">
-                About
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
+                New Arrivals
               </a>
             </div>
           </div>
 
           <div>
-            <h4 className="text-sm uppercase tracking-widest text-zinc-400 mb-4">
-              Follow
+            <h4 className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-6">
+              Info
             </h4>
-            <div className="flex flex-col gap-2">
-              <a href="#" className="text-zinc-500 hover:text-white text-sm transition-colors">
+            <div className="flex flex-col gap-3">
+              <a href="#about" className="text-xs text-neutral-600 hover:text-white transition-colors">
+                About
+              </a>
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
+                Shipping
+              </a>
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
+                Returns
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-6">
+              Connect
+            </h4>
+            <div className="flex flex-col gap-3">
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
                 Instagram
               </a>
-              <a href="#" className="text-zinc-500 hover:text-white text-sm transition-colors">
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
                 TikTok
+              </a>
+              <a href="#" className="text-xs text-neutral-600 hover:text-white transition-colors">
+                Twitter / X
               </a>
             </div>
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-white/5 text-center">
-          <p className="text-zinc-600 text-xs">
+        {/* Bottom */}
+        <div className="py-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-[10px] text-neutral-700 uppercase tracking-[0.2em]">
             &copy; {new Date().getFullYear()} 7SIDE. All rights reserved.
+          </p>
+          <p className="text-[10px] text-neutral-700 uppercase tracking-[0.2em]">
+            Amsterdam, Netherlands
           </p>
         </div>
       </div>
