@@ -9,10 +9,10 @@ export function LookbookSection() {
       <ContainerScroll
         titleComponent={
           <div className="flex flex-col items-center">
-            <p className="text-xs uppercase tracking-[0.4em] text-neutral-500 mb-4">
+            <p className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-neutral-500 mb-3 md:mb-4">
               Season One
             </p>
-            <h2 className="text-4xl md:text-[5rem] font-bold tracking-tighter text-white leading-none">
+            <h2 className="text-3xl md:text-[5rem] font-bold tracking-tighter text-white leading-none">
               Lookbook
             </h2>
           </div>
@@ -23,6 +23,7 @@ export function LookbookSection() {
           alt="7SIDE Lookbook"
           height={720}
           width={1400}
+          sizes="(max-width: 768px) 100vw, 80vw"
           className="mx-auto rounded-2xl object-cover h-full object-center"
           draggable={false}
         />

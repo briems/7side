@@ -32,15 +32,14 @@ const quotes = [
 
 export function MarqueeBand() {
   return (
-    <section className="py-20 bg-black">
-      <div className="flex flex-col items-center">
-        <InfiniteMovingCards
-          items={quotes}
-          direction="right"
-          speed="slow"
-          pauseOnHover
-        />
-      </div>
+    <section className="py-12 md:py-20 bg-black overflow-hidden">
+      <InfiniteMovingCards
+        items={quotes}
+        direction="right"
+        speed="slow"
+        pauseOnHover
+        className="max-w-full"
+      />
     </section>
   );
 }

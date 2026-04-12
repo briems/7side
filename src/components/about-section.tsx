@@ -7,18 +7,18 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black"
+      className="relative min-h-[80vh] md:min-h-screen flex items-center justify-center overflow-hidden bg-black"
     >
-      <div className="pointer-events-none absolute inset-0 [background-size:40px_40px] select-none [background-image:linear-gradient(to_right,#0a0a0a_1px,transparent_1px),linear-gradient(to_bottom,#0a0a0a_1px,transparent_1px)]" />
-      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="white" />
+      <div className="pointer-events-none absolute inset-0 [background-size:30px_30px] md:[background-size:40px_40px] select-none [background-image:linear-gradient(to_right,#0a0a0a_1px,transparent_1px),linear-gradient(to_bottom,#0a0a0a_1px,transparent_1px)]" />
+      <Spotlight className="-top-40 left-0 md:-top-20 md:left-60 hidden md:block" fill="white" />
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 md:py-0 text-center">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-xs uppercase tracking-[0.4em] text-neutral-500 mb-8"
+          className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-neutral-500 mb-6 md:mb-8"
         >
           The Story
         </motion.p>
@@ -28,7 +28,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent"
+          className="text-3xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent"
         >
           From the streets
           <br />
@@ -40,7 +40,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="mt-8 text-neutral-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto"
+          className="mt-6 md:mt-8 text-neutral-400 text-sm md:text-xl leading-relaxed max-w-sm md:max-w-2xl mx-auto"
         >
           7SIDE is the creative vision of Hayabusa. Born in Amsterdam, inspired
           by the raw energy of street culture, music, and the city that never
@@ -52,7 +52,7 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-6 text-neutral-500 text-base leading-relaxed max-w-xl mx-auto"
+          className="mt-4 md:mt-6 text-neutral-500 text-xs md:text-base leading-relaxed max-w-sm md:max-w-xl mx-auto"
         >
           No rules. No compromise. You either catch it or you don&apos;t.
         </motion.p>
@@ -64,7 +64,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="absolute inset-0 flex items-center justify-center pointer-events-none"
         >
-          <span className="text-[20rem] md:text-[30rem] font-bold tracking-tighter text-white select-none">
+          <span className="text-[12rem] md:text-[30rem] font-bold tracking-tighter text-white select-none">
             7
           </span>
         </motion.div>
