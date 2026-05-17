@@ -9,7 +9,7 @@ const quotes = [
     title: "Fashion Review",
   },
   {
-    quote: "Jr. brings that energy you can't fake. Every piece feels intentional.",
+    quote: "Hayabusa & Jr. brings that energy you can't fake. Every piece feels intentional.",
     name: "Highsnobiety",
     title: "Editor's Pick",
   },

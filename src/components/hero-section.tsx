@@ -55,7 +55,7 @@ export function HeroSection() {
           </h1>
 
           <TextGenerateEffect
-            words="By Jr. No rules, no compromise."
+            words="By Hayabusa & Jr. No rules, no compromise."
             className="text-center text-sm md:text-lg text-white/40 mt-3 md:mt-4 max-w-xs md:max-w-md"
             duration={0.8}
           />

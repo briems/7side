@@ -17,7 +17,7 @@ export function HeroScroll() {
               </span>
             </h1>
             <p className="mt-4 text-lg text-zinc-400 max-w-xl mx-auto">
-              By Jr. No rules, no compromise.
+              By Hayabusa & Jr. No rules, no compromise.
             </p>
           </>
         }

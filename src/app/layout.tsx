@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "7SIDE — Amsterdam Streetwear by Jr.",
-  description: "Amsterdam-based streetwear. Bold designs, no compromise. By Jr.",
+  title: "7SIDE — Amsterdam Streetwear by Hayabusa & Jr.",
+  description: "Amsterdam-based streetwear. Bold designs, no compromise. By Hayabusa & Jr.",
 };
 
 export default function RootLayout({

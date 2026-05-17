@@ -42,7 +42,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           className="mt-6 md:mt-8 text-neutral-400 text-sm md:text-xl leading-relaxed max-w-sm md:max-w-2xl mx-auto"
         >
-          7SIDE is the creative vision of Jr. Born in Amsterdam, inspired
+          7SIDE is the creative vision of Hayabusa & Jr. Born in Amsterdam, inspired
           by the raw energy of street culture, music, and the city that never
           sleeps. Every piece tells a story. Every drop is limited.
         </motion.p>
