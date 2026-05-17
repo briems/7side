@@ -68,6 +68,17 @@ VIEW_PROMPTS = {
         "no jacket, no text, no logos, no graphics anywhere on the shorts "
         "— completely blank fabric. Professional e-commerce product photo."
     ),
+    "model-front": (
+        "Editorial streetwear photograph: a young attractive male model in "
+        "his early twenties, light olive skin, short tidy dark hair, sharp "
+        "jawline, neutral confident expression, wearing the EXACT SAME "
+        "outfit shown in this reference image (plain pure-black hooded "
+        "full-zip technical jacket and matching shorts) — but the garments "
+        "must have NO text, NO logos, NO graphics anywhere — completely "
+        "blank black fabric. Full body front view, hands relaxed at sides, "
+        "clean light grey studio background, soft even lighting. "
+        "Professional e-commerce streetwear lookbook photography."
+    ),
 }
 
 
@@ -85,6 +96,11 @@ LOGO_PLACEMENTS: dict[str, list[tuple[float, float, float]]] = {
     "flatlay": [
         (0.430, 0.330, 0.065),  # jacket chest (below the hood)
         (0.720, 0.650, 0.055),  # shorts leg (right leg of lower-right shorts)
+    ],
+    # model-front: standing model, chest at upper third, shorts mid-frame
+    "model-front": [
+        (0.580, 0.310, 0.055),  # jacket chest (right chest of model)
+        (0.555, 0.640, 0.040),  # shorts leg (right leg of model)
     ],
 }
 
