@@ -1,45 +1,32 @@
 "use client";
-import React from "react";
-import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
 
-const quotes = [
-  {
-    quote: "7SIDE changed the game. Amsterdam streetwear has never looked this raw.",
-    name: "Complex NL",
-    title: "Fashion Review",
-  },
-  {
-    quote: "Hayabusa & Jr. brings that energy you can't fake. Every piece feels intentional.",
-    name: "Highsnobiety",
-    title: "Editor's Pick",
-  },
-  {
-    quote: "This is what happens when street culture meets real craftsmanship.",
-    name: "HYPEBEAST",
-    title: "Brand Spotlight",
-  },
-  {
-    quote: "Not just clothing — it's a movement. 7SIDE is Amsterdam's answer to the world.",
-    name: "GQ Netherlands",
-    title: "Emerging Brands",
-  },
-  {
-    quote: "Limited drops, unlimited energy. 7SIDE is the brand to watch in 2026.",
-    name: "Vogue NL",
-    title: "Street Style",
-  },
+const ticker = [
+  "DROP 01 — LIVE NOW",
+  "LIMITED PIECES",
+  "ATELIER AMSTERDAM",
+  "SS26",
+  "NO RESTOCKS",
+  "BY HAYABUSA × JR",
 ];
 
 export function MarqueeBand() {
+  const items = [...ticker, ...ticker, ...ticker];
+
   return (
-    <section className="py-12 md:py-20 bg-black overflow-hidden">
-      <InfiniteMovingCards
-        items={quotes}
-        direction="right"
-        speed="slow"
-        pauseOnHover
-        className="max-w-full"
-      />
+    <section className="relative bg-black border-y border-white/[0.06] overflow-hidden py-6 md:py-8">
+      <div
+        className="flex w-max gap-12 md:gap-20 animate-scroll whitespace-nowrap"
+        style={{ ["--animation-duration" as string]: "45s" }}
+      >
+        {items.map((line, i) => (
+          <div key={i} className="flex items-center gap-12 md:gap-20">
+            <span className="text-xs md:text-sm font-mono uppercase tracking-[0.35em] text-white/70">
+              {line}
+            </span>
+            <span className="h-1 w-1 rounded-full bg-white/30 shrink-0" />
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

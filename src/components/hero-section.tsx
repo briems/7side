@@ -1,7 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
+
+const letters = ["7", "S", "I", "D", "E"];
 
 export function HeroSection() {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,7 +16,6 @@ export function HeroSection() {
 
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden bg-black">
-      {/* Video Background — mobile gets smaller file */}
       <video
         autoPlay
         muted
@@ -29,59 +29,66 @@ export function HeroSection() {
         />
       </video>
 
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-black/40" />
+      <div className="absolute inset-0 bg-black/55" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/50" />
 
-      {/* Content */}
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, ease: "easeOut" }}
-          className="flex flex-col items-center"
+          transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}
+          className="text-[10px] md:text-[11px] uppercase tracking-[0.45em] text-white/55 mb-5 md:mb-7"
         >
-          <motion.p
-            initial={{ opacity: 0, letterSpacing: "0.5em" }}
-            animate={{ opacity: 1, letterSpacing: "0.3em" }}
-            transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-[10px] uppercase tracking-[0.3em] text-white/50 mb-4 md:mb-6"
-          >
-            Amsterdam Streetwear
-          </motion.p>
+          Amsterdam <span className="mx-2 opacity-50">·</span> SS26 <span className="mx-2 opacity-50">·</span> Drop 01
+        </motion.p>
 
-          <h1 className="text-6xl sm:text-7xl md:text-[10rem] font-bold tracking-tighter text-white leading-none">
-            7SIDE
-          </h1>
+        <h1 className="flex items-end gap-[0.05em] leading-none">
+          {letters.map((char, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 60, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{
+                duration: 0.8,
+                delay: 0.45 + i * 0.09,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="text-[5.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[12rem] font-bold tracking-[-0.04em] text-white"
+            >
+              {char}
+            </motion.span>
+          ))}
+        </h1>
 
-          <TextGenerateEffect
-            words="By Hayabusa & Jr. No rules, no compromise."
-            className="text-center text-sm md:text-lg text-white/40 mt-3 md:mt-4 max-w-xs md:max-w-md"
-            duration={0.8}
-          />
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={{ scaleX: 1 }}
+          transition={{ duration: 1, delay: 1.3, ease: "easeOut" }}
+          className="origin-left h-[1px] w-32 md:w-48 bg-white/30 mt-5 md:mt-7"
+        />
 
-          <motion.a
-            href="#collection"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 2, duration: 0.8 }}
-            className="mt-8 md:mt-12 px-6 md:px-8 py-2.5 md:py-3 border border-white/15 rounded-full text-[10px] md:text-xs uppercase tracking-[0.3em] text-white/60 hover:text-white hover:border-white/40 hover:bg-white/5 active:bg-white/10 transition-all duration-500"
-          >
-            Explore Collection
-          </motion.a>
-        </motion.div>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.5 }}
+          className="text-[10px] md:text-[11px] uppercase tracking-[0.4em] text-white/55 mt-4 md:mt-5 font-mono"
+        >
+          By Hayabusa <span className="opacity-50 mx-2">×</span> Jr.
+        </motion.p>
 
-        {/* Scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.5, duration: 1 }}
-          className="absolute bottom-8 md:bottom-10 left-1/2 -translate-x-1/2"
+          transition={{ duration: 1, delay: 2.2 }}
+          className="absolute bottom-10 md:bottom-14 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3"
         >
+          <span className="text-[9px] uppercase tracking-[0.4em] text-white/35">
+            Scroll
+          </span>
           <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-white/30 to-transparent"
+            animate={{ y: [0, 10, 0] }}
+            transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-[1px] h-10 bg-gradient-to-b from-white/40 to-transparent"
           />
         </motion.div>
       </div>

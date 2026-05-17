@@ -57,17 +57,6 @@ export function AboutSection() {
           No rules. No compromise. You either catch it or you don&apos;t.
         </motion.p>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 0.03, scale: 1 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="absolute inset-0 flex items-center justify-center pointer-events-none"
-        >
-          <span className="text-[12rem] md:text-[30rem] font-bold tracking-tighter text-white select-none">
-            7
-          </span>
-        </motion.div>
       </div>
     </section>
   );
