@@ -28,7 +28,7 @@ export function Footer() {
             <p className="text-xs text-neutral-600 leading-relaxed">
               Amsterdam-based streetwear
               <br />
-              by Hayabusa
+              by Jr.
             </p>
           </div>
 
