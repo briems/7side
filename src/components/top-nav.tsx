@@ -5,10 +5,10 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { name: "Collection", href: "#collection" },
-  { name: "Lookbook", href: "#lookbook" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Collection", href: "/#collection" },
+  { name: "Lookbook", href: "/#lookbook" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export function TopNav() {

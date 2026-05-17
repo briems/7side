@@ -3,33 +3,14 @@ import React from "react";
 import { FocusCards } from "@/components/ui/focus-cards";
 import { motion } from "framer-motion";
 import { Spotlight } from "@/components/ui/spotlight";
+import { products } from "@/lib/products";
 
-const collectionCards = [
-  {
-    title: "Shadow Hoodie",
-    src: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=800&q=80",
-  },
-  {
-    title: "Midnight Tee",
-    src: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=800&q=80",
-  },
-  {
-    title: "Drift Cargo",
-    src: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?w=800&q=80",
-  },
-  {
-    title: "Phantom Cap",
-    src: "https://images.unsplash.com/photo-1588850561407-ed78c334e67a?w=800&q=80",
-  },
-  {
-    title: "Eclipse Jacket",
-    src: "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=800&q=80",
-  },
-  {
-    title: "Void Joggers",
-    src: "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?w=800&q=80",
-  },
-];
+const collectionCards = products.map((p) => ({
+  title: p.title.replace(/^7SIDE\s+/, ""),
+  subtitle: `€${p.price}`,
+  src: p.cover,
+  href: `/product/${p.slug}`,
+}));
 
 export function CollectionSection() {
   return (
