@@ -8,7 +8,6 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
 
 export const FloatingNav = ({
   navItems,
@@ -52,17 +51,9 @@ export const FloatingNav = ({
       >
         <Link
           href="/"
-          aria-label="7SIDE — home"
-          className="relative flex items-center"
+          className="text-sm font-bold tracking-tighter text-white"
         >
-          <Image
-            src="/logo-white.png"
-            alt="7SIDE"
-            width={580}
-            height={786}
-            priority
-            className="h-6 w-auto opacity-90 hover:opacity-100 transition-opacity"
-          />
+          7SIDE
         </Link>
         {navItems.map((navItem, idx) => (
           <Link
